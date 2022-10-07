@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        
+<style>
+html,body{
+  height:50%;
+}
+
+.box{
+    position: absolute;
+    border-left: 10px;
+    background: paleturquoise;
+    margin: 10px;
+    padding: 0 7px 0 7px;    
+    max-width: 400px;
+    border-radius: 10px;
+    /* text-align:center; */
+}
+
+.box1 {
+    display: inline-block;
+    padding: 10px;
+    margin: 50px 0;
+    max-width:400px; 
+}
+
+.box2 {
+    display: inline-block;
+    padding: 10px;
+    margin: 50px 0;
+    /* margin-top: 100px;  */
+}
+
+
+
+body{
+    
+  background-color: paleturquoise;
+  background-image: url("img1.jpg");
+  background-blend-mode:multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;  
+  text-align:center;  
+}
+
+body:before{
+  content:'';
+  height:50%;
+  display:inline-block;
+  vertical-align:middle;
+}
+button{
+  background:#1AAB8A;  
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+.container {
+  text-align: center;
+  top: 20%;
+  left: 35%;
+  position:relative;
+}
+                
+</style>
+    
+    </head>
+
+    <body>
+      <div class="container">
+            <div class="box" >
+                    <h1>Plant Watering System</h1>
+                    <div class="box1" >          
+                            <button id="button" type="button">Find Water Added</button>     
+                    </div>
+                    
+                    <div class="box2" >
+                            <button id="button1" type="button">Find Water Remaining</button>
+                    </div>
+            </div>
+            
+              </div>
+    </body>
+</html>
+
+<script type="text/javascript">
+    document.getElementById("button").onclick = function(){
+        location.href= "http://localhost:5000/add"
+    };
+
+    document.getElementById("button1").onclick = function(){
+        location.href= "http://localhost:5000/level"
+    };
+</script>
