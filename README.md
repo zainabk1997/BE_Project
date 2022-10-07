@@ -14,7 +14,7 @@ Flask
 Node JS
 Arduino IDE
 
-Please take a pull of the link - and run the files to find the output on console
+Please clone the repository - https://github.com/zainabk1997/BE_Project and run the files to find the output on console
 
 ## Files
 
